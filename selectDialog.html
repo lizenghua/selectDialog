@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/ui-dialog.css" />
+		<style>
+			*{font-family: "微软雅黑";}
+			.input-group[class*=col-]{ padding: 10px;}
+			.input-group .input-group-addon{ background: #fff;}
+			.u-btn-close span { background: url(img/x.png) no-repeat; display: inline-block; width: 9px; height: 9px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="input-group col-xs-12">
+			<div class="input-group-addon">集群名称</div>
+			<select placeholder="(不选为全部)" class="select2_src form-control" multiple="" name="SetID" id="set_select" style="display: none;">
+                <option value="2241">空闲机池</option>
+                <option value="2244">腾讯云</option>                                
+			</select>
+		</div>
+		
+		<script src="js/jquery-1.10.2.min.js" ></script>
+		<script src="js/dialog-min.js" ></script>
+		<script src="js/selectDialog.js"></script>
+		<script>
+		$(function(){
+			$('#set_select').selectDialog({});
+		})			
+		</script>
+	</body>
+
+</html>
